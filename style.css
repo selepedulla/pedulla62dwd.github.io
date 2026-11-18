@@ -1,0 +1,294 @@
+:root {
+    --blanco: #ffffff;
+    --rosa-claro: #ffa2d8;
+    --rosa-coquette: #ec6dbc; 
+    --rosa-fuerte: #b4016f;
+    --encabezados: #6b0e54;
+    --gris-oscuro: #333333;
+    --fuente-titulo: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--rosa-claro);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    color: var(--encabezados);
+    margin-bottom: 2rem;
+}
+h2, h3 {
+    background-color: var(--blanco);
+    color: var(--encabezados);
+    padding: 1rem 4rem;   
+    border-radius: 50px;  
+    border: 2px solid var(--rosa-coquette);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+    align-items: center;
+}
+
+
+.contenido-banner h2 {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    display: block; 
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.menu-fondo {
+    background-color: var(--encabezados);
+    padding: 1rem 0;
+}
+
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-logo h1 {
+    color: var(--rosa-coquette);
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.buscador-contenedor {
+    display: flex;
+    align-items: center;
+    background-color: var(--blanco);
+    border-radius: 50px; 
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--rosa-coquette);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.input-buscador {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.4rem;
+    color: var(--gris-oscuro);
+}
+
+.input-buscador::placeholder {
+    color: var(--rosa-coquette);
+    opacity: 0.7;
+}
+.boton-buscar {
+    background: none;
+    border: none;
+    color: var(--rosa-fuerte);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+@media (max-width: 768px) {
+    .nav-contenedor {
+        flex-direction: column;
+    }
+    .buscador-contenedor {
+        margin: 1rem 0;
+        max-width: 90%;
+    }
+}
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+
+
+.fondo-banner {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/pngtree-3d-render-of-a-household-kitchen-appliance-set-image_3882062.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.contenido-banner h2 {
+    color: var(--blanco);
+    font-size: 4rem;
+}
+
+.contenido-banner span {
+    display: block;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.fondo-servicios {
+    border-radius: 2rem;
+    margin: 10px auto; 
+}
+.display-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.mis-servicios, h2{
+    text-align: center;
+}
+.iconos-circulo {
+ 
+    background-color: var(--blanco); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--rosa-fuerte);
+    position: relative;
+}
+.display-destacados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+.producto-card {
+    background: rgb(199, 89, 181);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 2px solid var(--rosa-coquette);
+   
+}
+
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.formulario {
+    background: rgb(199, 89, 181);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 3px dashed var(--rosa-coquette);
+    max-width: 700px;
+    margin: 4rem auto;
+}
+
+.campo {
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    color: var(--encabezados);
+}
+
+.input-text {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--rosa-coquette);
+    border-radius: 1rem;
+    background: var(--rosa-claro);
+}
+
+.boton {
+    background: var(--rosa-fuerte);
+    color: var(--blanco);
+    padding: 1.2rem 3rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-pink {
+    background: var(--encabezados);
+    color: var(--blanco);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.nav__link {
+    color: var(--rosa-coquette);
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .display-destacados {
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav-contenedor {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-destacados {
+        grid-template-columns: 1fr;
+    }
+}
+textarea{
+    resize: none;
+}
